@@ -9,7 +9,7 @@ function LeaderboardHeader() {
         Country
         <select name="country" id="country">
           {
-            Object.entries(countries).map(([code, name], idx) => (
+            Object.entries(countries).map(([code, name]) => (
               <option key={code} value={code}>{name}</option>
             ))
           }
