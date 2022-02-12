@@ -1,11 +1,12 @@
 import React from 'react';
-import LeaderboardHeader from '../components/LeaderboardHeader';
+import CountrySelector from '../components/CountrySelector';
 import LeaderboardTable from '../components/LeaderboardTable';
 
 function Leaderboard() {
   return (
     <div>
-      <LeaderboardHeader />
+      <h1>Tetr.io Leaderboard</h1>
+      <CountrySelector />
       <hr />
       <LeaderboardTable />
     </div>
