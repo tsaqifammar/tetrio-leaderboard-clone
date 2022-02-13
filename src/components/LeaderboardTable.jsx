@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function LeaderboardTable({ players }) {
   return (
-    <table>
+    <table className="leaderboard-table">
       <thead>
         <tr>
           <th title="Rank number">#</th>
@@ -14,7 +14,7 @@ function LeaderboardTable({ players }) {
           <th title="Pieces Per Second, average over the last 10 games">PPS</th>
           <th title="Versus Score (general indicator of skill), average over the last 10 games">VS</th>
           <th title="Glicko-2, higher is better, followed by rating deviation (RD)">Glicko</th>
-          <th title="Tetra Rating (0-25000, higher is better) and rank letter">TR</th>
+          <th className="important" title="Tetra Rating (0-25000, higher is better) and rank letter">TR</th>
         </tr>
       </thead>
       <tbody>
@@ -34,17 +34,28 @@ function LeaderboardTable({ players }) {
               rank,
             },
           } = player;
+          const winratio = (parseFloat(gameswon) / parseFloat(gamesplayed)) * 100;
+
           return (
             <tr key={_id}>
               <td>{idx + 1}</td>
-              <td>{username}</td>
-              <td>{gameswon}</td>
+              <td className="important">{username}</td>
+              <td>
+                {gameswon}
+                <span className="extra">{` (${winratio.toFixed(2)}%)`}</span>
+              </td>
               <td>{gamesplayed}</td>
               <td>{apm}</td>
               <td>{pps}</td>
               <td>{vs}</td>
-              <td>{`${Math.round(parseFloat(glicko))} + ${Math.round(parseFloat(rd))}`}</td>
-              <td>{`${parseFloat(rating).toFixed(2)} ${rank}`}</td>
+              <td>
+                {Math.round(parseFloat(glicko))}
+                <span className="extra">
+                  &#177;
+                  {Math.round(parseFloat(rd))}
+                </span>
+              </td>
+              <td className="important">{`${parseFloat(rating).toFixed(2)} ${rank}`}</td>
             </tr>
           );
         })}

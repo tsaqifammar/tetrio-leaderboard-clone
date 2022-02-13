@@ -99,3 +99,36 @@ body {
   height: 1px;
   border: 0;
 }
+
+.leaderboard-table {
+  width: 100%;
+  font-size: var(--text-base);
+  text-align: center;
+  border-spacing: 0 5px;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table thead tr {
+  background-color: var(--dark-bg);
+}
+
+.leaderboard-table tbody tr {
+  background-color: var(--bg);
+}
+
+.important {
+  font-family: var(--text-type-2);
+  color: var(--text-bright);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.extra {
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+}
