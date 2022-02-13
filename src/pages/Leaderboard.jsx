@@ -31,7 +31,7 @@ function Leaderboard() {
           <h1>Tetr.io Leaderboard</h1>
           <CountrySelector country={country} onChangeHandler={changeCountry} />
           <hr />
-          <LeaderboardTable />
+          <LeaderboardTable players={players} />
         </>
       )}
     </div>

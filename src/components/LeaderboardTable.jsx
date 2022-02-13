@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function LeaderboardTable() {
+function LeaderboardTable({ players }) {
   return (
     <table>
       <thead>
@@ -17,25 +18,43 @@ function LeaderboardTable() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>czsmall0402</td>
-          <td>327 (92.89%)</td>
-          <td>352</td>
-          <td>162.73</td>
-          <td>2.88</td>
-          <td>342.94</td>
-          <td>4080 + 81</td>
-          <td>
-            24998.62
-            <bold>
-              X
-            </bold>
-          </td>
-        </tr>
+        {players.map((player, idx) => {
+          const {
+            _id,
+            username,
+            league: {
+              gameswon,
+              gamesplayed,
+              apm,
+              pps,
+              vs,
+              glicko,
+              rd,
+              rating,
+              rank,
+            },
+          } = player;
+          return (
+            <tr key={_id}>
+              <td>{idx + 1}</td>
+              <td>{username}</td>
+              <td>{gameswon}</td>
+              <td>{gamesplayed}</td>
+              <td>{apm}</td>
+              <td>{pps}</td>
+              <td>{vs}</td>
+              <td>{`${Math.round(parseFloat(glicko))} + ${Math.round(parseFloat(rd))}`}</td>
+              <td>{`${parseFloat(rating).toFixed(2)} ${rank}`}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
 }
+
+LeaderboardTable.propTypes = {
+  players: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default LeaderboardTable;
