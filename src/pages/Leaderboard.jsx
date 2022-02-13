@@ -9,13 +9,21 @@ function Leaderboard() {
   const [players, setPlayers] = useState([]);
 
   useEffect(async () => {
-    setPlayers(await getPlayers());
+    setPlayers(await getPlayers({}));
     setIsLoading(false);
   }, []);
 
   const changeCountry = async (c) => {
     setCountry(c);
-    setPlayers(await getPlayers(c));
+    setPlayers(await getPlayers({ country: c }));
+  };
+
+  const loadMoreHandler = async () => {
+    const lastPlayer = players.slice(-1)[0];
+    const trUpperbound = lastPlayer.league.rating;
+    const morePlayers = await getPlayers({ country, trUpperbound });
+    if (morePlayers.length < 50) console.log('No more players to load :)');
+    setPlayers([...players, ...morePlayers]);
   };
 
   return (
@@ -29,6 +37,7 @@ function Leaderboard() {
         <CountrySelector country={country} onChangeHandler={changeCountry} />
         <hr />
         <LeaderboardTable players={players} />
+        <button type="button" onClick={loadMoreHandler}>Load more</button>
       </div>
     )
   );
