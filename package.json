@@ -6,6 +6,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "startProxy": "node ./src/proxyServer.js",
     "lint": "eslint ./src/**/*.jsx"
   },
   "dependencies": {
