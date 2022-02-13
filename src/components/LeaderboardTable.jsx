@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RankIcon from './RankIcon';
 
 function LeaderboardTable({ players }) {
   return (
@@ -55,7 +56,10 @@ function LeaderboardTable({ players }) {
                   {Math.round(parseFloat(rd))}
                 </span>
               </td>
-              <td className="important">{`${parseFloat(rating).toFixed(2)} ${rank}`}</td>
+              <td className="important">
+                {`${parseFloat(rating).toFixed(2)} `}
+                <RankIcon rank={rank} size="lg" />
+              </td>
             </tr>
           );
         })}

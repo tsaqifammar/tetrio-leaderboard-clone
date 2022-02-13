@@ -48,6 +48,14 @@ p, h1, h2, h3, h4, h5, h6 {
   --text-lg: 24px;
   --text-xl: 36px;
   --text-4xl: 96px;
+  --rank-x: #FE3AFE;
+  --rank-u: #FF3312;
+  --rank-s: #FFCC3A;
+  --rank-a: #56B164;
+  --rank-b: #4457B6;
+  --rank-c: #70388A;
+  --rank-d: #907591;
+  --rank-unknown: #959595;
 }
 
 body {
@@ -132,3 +140,19 @@ body {
   font-size: var(--text-sm);
   color: var(--text-dim);
 }
+
+.rank {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.rank-x { color: var(--rank-x); }
+.rank-u { color: var(--rank-u); }
+.rank-s { color: var(--rank-s); }
+.rank-a { color: var(--rank-a); }
+.rank-b { color: var(--rank-b); }
+.rank-c { color: var(--rank-c); }
+.rank-d { color: var(--rank-d); }
+.rank-unknown { color: var(--rank-unknown); }
+.rank-lg { font-size: var(--text-lg); }
+.rank-xl { font-size: var(--text-4xl); }
