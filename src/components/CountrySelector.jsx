@@ -9,7 +9,7 @@ function CountrySelector({ country, onChangeHandler }) {
       <select value={country} onChange={(e) => onChangeHandler(e.target.value)}>
         <option value="">All Countries</option>
         {
-          Object.entries(countries).map(([code, name]) => (
+          countries.map(([code, name]) => (
             <option key={code} value={code}>{name}</option>
           ))
         }
