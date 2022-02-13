@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda&family=Rubik:ital,wght@0,400;0,700;1,700&display=swap');
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -27,4 +29,73 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 #root {
   isolation: isolate;
+}
+
+/* ======================================== */
+
+:root {
+  --pg: #0f160d;
+  --bg: #162113;
+  --dark-bg: #080d07;
+  --text-dim: #5c8456;
+  --text-reg: #a3d391;
+  --text-bright: #e2fcde;
+  --text-type-1: 'Coda', sans-serif;
+  --text-type-2: 'Rubik', sans-serif;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 18px;
+  --text-lg: 24px;
+  --text-xl: 36px;
+  --text-4xl: 96px;
+}
+
+body {
+  background-color: var(--pg);
+  font-family: var(--text-type-1);
+  color: var(--text-reg);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.leaderboard-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding-top: 30px;
+}
+
+.header-title {
+  font-family: var(--text-type-2);
+  font-size: var(--text-xl);
+  margin-bottom: 20px;
+}
+
+.header label {
+  color: var(--text-dim);
+}
+
+.header select {
+  padding: 12px;
+  margin-left: 20px;
+  background-color: var(--dark-bg);
+  border-style: none;
+  border-radius: 4px;
+  color: var(--text-reg);
+  font-size: var(--text-base);
+  width: 300px;
+}
+
+.leaderboard-sep {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: var(--text-reg);
+  height: 1px;
+  border: 0;
 }

@@ -28,16 +28,20 @@ function Leaderboard() {
 
   return (
     isLoading ? (
-      <div>
-        <h1>Loading...</h1>
+      <div className="container">
+        <h1 className="header-title">Loading...</h1>
       </div>
     ) : (
-      <div>
-        <h1>Tetr.io Leaderboard</h1>
-        <CountrySelector country={country} onChangeHandler={changeCountry} />
-        <hr />
-        <LeaderboardTable players={players} />
-        <button type="button" onClick={loadMoreHandler}>Load more</button>
+      <div className="container">
+        <div className="leaderboard-content header">
+          <h1 className="header-title">TETR.IO LEADERBOARD</h1>
+          <CountrySelector country={country} onChangeHandler={changeCountry} />
+        </div>
+        <hr className="leaderboard-sep" />
+        <div className="leaderboard-content">
+          <LeaderboardTable players={players} />
+          <button type="button" onClick={loadMoreHandler}>Load more</button>
+        </div>
       </div>
     )
   );
