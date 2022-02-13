@@ -1,7 +1,7 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import CountrySelector from '../components/CountrySelector';
 import LeaderboardTable from '../components/LeaderboardTable';
+import getPlayers from '../fetchData';
 
 function Leaderboard() {
   const [isLoading, setIsLoading] = useState(true);
@@ -9,32 +9,28 @@ function Leaderboard() {
   const [players, setPlayers] = useState([]);
 
   useEffect(async () => {
-    const url = 'http://localhost:4000/players';
-    setPlayers(await axios.get(url).then((res) => res.data));
+    setPlayers(await getPlayers());
     setIsLoading(false);
   }, []);
 
   const changeCountry = async (c) => {
     setCountry(c);
-
-    const url = 'http://localhost:4000/players';
-    setPlayers(await axios.get(url, { params: { country: c } })
-      .then((res) => res.data));
+    setPlayers(await getPlayers(c));
   };
 
   return (
-    <div>
-      {isLoading ? (
+    isLoading ? (
+      <div>
         <h1>Loading...</h1>
-      ) : (
-        <>
-          <h1>Tetr.io Leaderboard</h1>
-          <CountrySelector country={country} onChangeHandler={changeCountry} />
-          <hr />
-          <LeaderboardTable players={players} />
-        </>
-      )}
-    </div>
+      </div>
+    ) : (
+      <div>
+        <h1>Tetr.io Leaderboard</h1>
+        <CountrySelector country={country} onChangeHandler={changeCountry} />
+        <hr />
+        <LeaderboardTable players={players} />
+      </div>
+    )
   );
 }
 

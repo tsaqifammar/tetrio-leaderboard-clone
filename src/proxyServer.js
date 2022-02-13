@@ -9,7 +9,7 @@ app.use(cors());
 app.get('/players', async (req, res) => {
   const { country } = req.query;
 
-  const params = { limit: 20 };
+  const params = { limit: 50 };
   if (country) params.country = country;
 
   const API_CALL = 'https://ch.tetr.io/api/users/lists/league';
