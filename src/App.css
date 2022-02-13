@@ -156,3 +156,17 @@ body {
 .rank-unknown { color: var(--rank-unknown); }
 .rank-lg { font-size: var(--text-lg); }
 .rank-xl { font-size: var(--text-4xl); }
+
+.btn-load {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--text-reg);
+  background-color: var(--pg);
+  text-decoration: underline;
+  border-style: none;
+  cursor: pointer;
+}
+
+.btn-load:hover {
+  color: var(--text-bright);
+}

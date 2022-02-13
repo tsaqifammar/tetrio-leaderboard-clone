@@ -40,7 +40,7 @@ function Leaderboard() {
         <hr className="leaderboard-sep" />
         <div className="leaderboard-content">
           <LeaderboardTable players={players} />
-          <button type="button" onClick={loadMoreHandler}>Load more</button>
+          <button className="btn-load" type="button" onClick={loadMoreHandler}>LOAD MORE</button>
         </div>
       </div>
     )
