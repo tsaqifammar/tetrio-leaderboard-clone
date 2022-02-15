@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CountrySelector from '../components/CountrySelector';
 import LeaderboardTable from '../components/LeaderboardTable';
-import getPlayers from '../fetchData';
+import { getPlayers } from '../fetchData';
 
 function Leaderboard() {
   const [isLoading, setIsLoading] = useState(true);

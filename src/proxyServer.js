@@ -21,6 +21,18 @@ app.get('/players', async (req, res) => {
   }
 });
 
+app.get('/players/:username', async (req, res) => {
+  const { username } = req.params;
+
+  const API_CALL = `https://ch.tetr.io/api/users/${username}`;
+  try {
+    const player = await axios.get(API_CALL);
+    res.json(player.data.data.user);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 app.listen(4000, () => {
   console.log('Proxy server started on port 4000');
 });

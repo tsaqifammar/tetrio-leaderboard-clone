@@ -7,4 +7,14 @@ const getPlayers = ({ country, trUpperbound = 25000 }) => {
     .catch((err) => err);
 };
 
-export default getPlayers;
+const getPlayer = (username) => {
+  const url = `http://localhost:4000/players/${username}`;
+  return axios.get(url)
+    .then((res) => res.data)
+    .catch((err) => err);
+};
+
+export {
+  getPlayers,
+  getPlayer,
+};
