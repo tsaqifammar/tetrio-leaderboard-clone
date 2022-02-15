@@ -70,6 +70,8 @@ body {
   margin: auto;
 }
 
+/* ================ LeaderboardPage ============== */
+
 .leaderboard-content {
   display: flex;
   flex-direction: column;
@@ -83,6 +85,7 @@ body {
 .header-title {
   font-family: var(--text-type-2);
   font-size: var(--text-xl);
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
 
@@ -179,4 +182,49 @@ body {
 
 .btn-load:hover {
   color: var(--text-bright);
+}
+
+/* ============================================= */
+
+/* ================ PlayerProfile ============== */
+
+.container-2 {
+  width: 70%;
+  margin: auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.friends {
+  display: flex;
+  align-items: center;
+}
+
+.friend-icon {
+  width: var(--text-lg);
+}
+
+.card {
+  background-color: var(--bg);
+  border-radius: 4px;
+}
+
+.card-content {
+  width: 90%;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  background-color: blue;
+}
+
+.right {
+  background-color: yellow;
 }
