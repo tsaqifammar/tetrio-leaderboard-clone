@@ -41,7 +41,7 @@ function LeaderboardTable({ players }) {
           return (
             <tr key={_id}>
               <td>{idx + 1}</td>
-              <td className="important"><Link to={`/p/${username}`}>{username}</Link></td>
+              <td className="important"><Link className="link" to={`/p/${username}`}>{username}</Link></td>
               <td>
                 {gameswon}
                 <span className="extra">{` (${winratio.toFixed(2)}%)`}</span>

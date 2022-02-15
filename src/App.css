@@ -137,6 +137,15 @@ body {
   font-weight: bold;
 }
 
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+}
+
 .extra {
   font-size: var(--text-sm);
   color: var(--text-dim);
