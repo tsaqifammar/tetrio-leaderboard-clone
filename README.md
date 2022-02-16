@@ -1,55 +1,45 @@
-# Nano React App Default Javascript Template
+# TETR&#46;IO Leaderboard Clone
 
-The default template project for [nano-react-app](https://github.com/nano-react-app/nano-react-app).
+A remake of [TETR.IO leaderboard](https://ch.tetr.io/players/) built with React (and Express).
 
-- `npm start` — This will spawn a development server with a default port of `3000`.
-- `npm run build` — This will output a production build in the `dist` directory.
+## Try it yourself
 
-## Custom port
+Do the following steps to get it up and running:
 
-You can use the `-p` flag to specify a port for development. To do this, you can either run `npm start` with an additional flag:
-
+1. Clone this repository to a directory in your local computer.
+2. Install the dependencies:
 ```
-npm start -- --port 1234
+> npm install
 ```
-
-Or edit the `start` script directly:
-
+3. Start the proxy server:
 ```
-vite --port 1234
+> npm run startProxy
 ```
-
-## Adding styles
-
-You can use CSS files with simple ES2015 `import` statements anywhere in your Javascript:
-
-```js
-import "./index.css";
+4. Start the app by running:
 ```
-
-## Babel transforms
-
-The Babel preset [babel-preset-nano-react-app](https://github.com/nano-react-app/babel-preset-nano-react-app) is used to support the same transforms that Create React App supports.
-
-The Babel configuration lives inside `package.json` and will override an external `.babelrc` file, so if you want to use `.babelrc` remember to delete the `babel` property inside `package.json`.
-
-
-## Deploy to GitHub Pages
-
-You can also deploy your project using GitHub pages.
-First install the `gh-pages` [package](https://github.com/tschaub/gh-pages):
-
-`npm i -D gh-pages`
-
-Use the following scripts for deployment:
-
+> npm run start
 ```
-"scripts": {
-  "start": "vite",
-  "build": "vite build",
-  "predeploy": "rm -rf dist && vite build",
-  "deploy": "gh-pages -d dist"
-},
-```
+5. Open your browser and go to `http://localhost:3000`.
 
-Then follow the normal procedure in GitHub Pages and select the `gh-pages` branch.
+## Pages
+
+### Leaderboard
+![Leaderboard](https://user-images.githubusercontent.com/54428874/154258132-f42b53be-b006-4274-bc91-deb77d2f9ce8.png)
+
+### Player Profile
+![Player Profile](https://user-images.githubusercontent.com/54428874/154258245-3cac3e6b-fd7c-42ae-87c7-5e88256d7e5b.png)
+
+## API Used
+
+[Tetra Channel API](https://tetr.io/about/api/)
+
+## Outcomes
+
+Here are some of the things I learned while developing this application:
+
+1. Making API calls with [axios](https://www.npmjs.com/package/axios).
+2. Use of react `useEffect` hook.
+3. Routing with [react-router-dom](https://reactrouter.com/) (static and dynamic).
+4. Defining prop types of components.
+5. Make pages responsive with CSS media queries.
+6. Fixing CORS issues by creating a proxy server in between the web client (React) and the API.
