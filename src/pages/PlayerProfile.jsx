@@ -32,7 +32,7 @@ function PlayerProfile() {
         </div>
         <div className="profile-details">
           <div className="left">
-            <img src="https://tetr.io/user-content/avatars/5e844b0868270e617d52c990.jpg" alt="" />
+            <img className="profile-picture" src="https://tetr.io/user-content/avatars/5e844b0868270e617d52c990.jpg" alt="" />
             <Card>
               <Info name="online games" value={player.gamesplayed} />
               <Info name="of which wins" value={player.gameswon} />
