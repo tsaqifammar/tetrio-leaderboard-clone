@@ -34,28 +34,32 @@ function PlayerProfile() {
           <div className="left">
             <img className="profile-picture" src="https://tetr.io/user-content/avatars/5e844b0868270e617d52c990.jpg" alt="" />
             <Card>
-              <Info name="online games" value={player.gamesplayed} />
-              <Info name="of which wins" value={player.gameswon} />
+              <>
+                <Info name="online games" value={player.gamesplayed.toString()} />
+                <Info name="of which wins" value={player.gameswon.toString()} />
+              </>
             </Card>
           </div>
           <div className="right">
             <Card>
-              <h1>hello, world</h1>
-              <hr />
-              <Info name="games played" value={player.league.gamesplayed} />
-              <Info
-                name="games won"
-                value={player.league.gamesplayed}
-                extra={`(${((parseFloat(player.league.gameswon) / parseFloat(player.league.gamesplayed)) * 100).toFixed(2)}%)`}
-              />
-              <Info
-                name="percentile"
-                value={`${Math.round(((1 - parseFloat(player.league.percentile)) * 100))}th`}
-                extra={`(top ${(parseFloat(player.league.percentile) * 100).toFixed(2)}%)`}
-              />
-              <Info name="apm" value={player.league.apm} />
-              <Info name="pps" value={player.league.pps} />
-              <Info name="pps" value={player.league.vs} />
+              <>
+                <h1>hello, world</h1>
+                <hr />
+                <Info name="games played" value={player.league.gamesplayed.toString()} />
+                <Info
+                  name="games won"
+                  value={player.league.gamesplayed.toString()}
+                  extra={`(${((parseFloat(player.league.gameswon) / parseFloat(player.league.gamesplayed)) * 100).toFixed(2)}%)`}
+                />
+                <Info
+                  name="percentile"
+                  value={`${Math.round(((1 - parseFloat(player.league.percentile)) * 100))}th`}
+                  extra={`(top ${(parseFloat(player.league.percentile) * 100).toFixed(2)}%)`}
+                />
+                <Info name="apm" value={player.league.apm.toString()} />
+                <Info name="pps" value={player.league.pps.toString()} />
+                <Info name="pps" value={player.league.vs.toString()} />
+              </>
             </Card>
           </div>
         </div>
