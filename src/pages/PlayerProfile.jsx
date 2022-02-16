@@ -51,7 +51,7 @@ function PlayerProfile() {
               <Info
                 name="percentile"
                 value={`${Math.round(((1 - parseFloat(player.league.percentile)) * 100))}th`}
-                extra={`top ${(parseFloat(player.league.percentile) * 100).toFixed(2)}%`}
+                extra={`(top ${(parseFloat(player.league.percentile) * 100).toFixed(2)}%)`}
               />
               <Info name="apm" value={player.league.apm} />
               <Info name="pps" value={player.league.pps} />

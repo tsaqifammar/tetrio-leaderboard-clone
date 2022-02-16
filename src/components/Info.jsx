@@ -5,6 +5,7 @@ function Info({ name, value, extra }) {
   return (
     <div className="info">
       <p className="info-name">{name}</p>
+      <span className="info-divider" />
       <p className="info-value">{value}</p>
       <p className="info-extra">{extra}</p>
     </div>

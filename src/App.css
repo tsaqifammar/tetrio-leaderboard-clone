@@ -37,6 +37,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --pg: #0f160d;
   --bg: #162113;
   --dark-bg: #080d07;
+  --text-dark: #25371f;
   --text-dim: #5c8456;
   --text-reg: #a3d391;
   --text-bright: #e2fcde;
@@ -251,4 +252,31 @@ body {
 .profile-picture {
   width: 100%;
   border-radius: 4px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-sm);
+}
+
+.info-name {
+  text-transform: uppercase;
+}
+
+.info-divider {
+  flex-grow: 1;
+  border-bottom: 1px solid var(--text-dark);
+  margin: 7px;
+}
+
+.info-value {
+  color: var(--text-bright);
+  font-family: var(--text-type-2);
+  font-weight: bold;
+}
+
+.info-extra {
+  color: var(--text-dim);
+  margin-left: 5px;
 }
