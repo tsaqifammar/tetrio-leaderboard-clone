@@ -162,7 +162,9 @@ body {
 
 .rank {
   font-style: italic;
+  font-family: var(--text-type-2);
   text-transform: uppercase;
+  line-height: 0;
 }
 
 .rank-x { color: var(--rank-x); }
@@ -221,6 +223,19 @@ body {
 .card-content {
   width: 90%;
   margin: auto;
+}
+
+.header-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-dim);
 }
 
 .profile-details {

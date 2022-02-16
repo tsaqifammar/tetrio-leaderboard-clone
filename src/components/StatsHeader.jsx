@@ -1,11 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RankIcon from './RankIcon';
 
 // eslint-disable-next-line object-curly-newline
 function StatsHeader({ rankLetter, rating, glicko, rd, rankGlobal, rankLocal }) {
   return (
     <div className="header-stats">
-      <h1>{`${rankLetter}, ${rating}, ${glicko}, ${rd}, ${rankGlobal}, ${rankLocal}`}</h1>
+      <div className="header-left">
+        <RankIcon rank={rankLetter} size="xl" />
+        <div>
+          <h1>
+            <span className="important">{rating}</span>
+            {' '}
+            TR
+          </h1>
+          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+          <p>Glicko: {glicko} &#177; {rd}</p>
+        </div>
+      </div>
+      <div className="header-right">
+        <h1>{`${rankGlobal} ${rankLocal}`}</h1>
+      </div>
     </div>
   );
 }
