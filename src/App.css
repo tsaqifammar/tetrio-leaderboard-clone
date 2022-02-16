@@ -204,6 +204,8 @@ body {
 .profile-header {
   display: flex;
   justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .friends {
@@ -223,12 +225,15 @@ body {
 .card-content {
   width: 90%;
   margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .header-stats {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: 1.5rem;
 }
 
 .header-left {
@@ -236,6 +241,10 @@ body {
   align-items: center;
   gap: 1rem;
   color: var(--text-dim);
+}
+
+.header-left h1 {
+  font-size: var(--text-lg);
 }
 
 .header-right {

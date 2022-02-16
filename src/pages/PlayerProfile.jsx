@@ -56,7 +56,7 @@ function PlayerProfile() {
                   rankGlobal={player.league.standing}
                   rankLocal={player.league.standing_local}
                 />
-                <hr />
+                <hr className="leaderboard-sep" />
                 <Info name="games played" value={player.league.gamesplayed.toString()} />
                 <Info
                   name="games won"
