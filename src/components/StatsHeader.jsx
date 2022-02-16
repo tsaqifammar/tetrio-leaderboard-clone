@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RankIcon from './RankIcon';
+import Standing from './Standing';
 
 // eslint-disable-next-line object-curly-newline
 function StatsHeader({ rankLetter, rating, glicko, rd, rankGlobal, rankLocal }) {
@@ -19,7 +20,10 @@ function StatsHeader({ rankLetter, rating, glicko, rd, rankGlobal, rankLocal }) 
         </div>
       </div>
       <div className="header-right">
-        <h1>{`${rankGlobal} ${rankLocal}`}</h1>
+        <Standing title="global" place={rankGlobal} />
+        {rankLocal !== -1
+          ? <Standing title="country" place={rankLocal} />
+          : ''}
       </div>
     </div>
   );

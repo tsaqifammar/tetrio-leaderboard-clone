@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 function Standing({ title, place }) {
   return (
-    <div>
-      <h1 className="important place-title">{title}</h1>
+    <div className="standing">
+      <p className="standing-title">{title}</p>
       <p>
-        {'# '}
-        <span className="important">{place}</span>
+        #
+        <span className="standing-place">{place}</span>
       </p>
     </div>
   );

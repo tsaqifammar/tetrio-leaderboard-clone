@@ -238,6 +238,33 @@ body {
   color: var(--text-dim);
 }
 
+.header-right {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.standing {
+  background-color: var(--pg);
+  color: var(--text-dim);
+  font-family: var(--text-type-2);
+  border-radius: 4px;
+  padding: 0.4rem 0.7rem;
+  text-align: center;
+}
+
+.standing-title {
+  font-weight: bold;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.standing-place {
+  font-weight: bold;
+  font-size: var(--text-base);
+  text-transform: uppercase;
+  color: var(--text-bright);
+}
+
 .profile-details {
   display: flex;
   align-items: stretch;
