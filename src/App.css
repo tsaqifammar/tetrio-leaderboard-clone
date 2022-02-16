@@ -83,11 +83,16 @@ body {
   padding-top: 30px;
 }
 
+.header-name {
+  display: flex;
+  align-items: center;
+}
+
 .header-title {
   font-family: var(--text-type-2);
   font-size: var(--text-xl);
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-right: 1rem;
 }
 
 .header label {
