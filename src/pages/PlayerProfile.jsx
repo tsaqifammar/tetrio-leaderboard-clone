@@ -3,6 +3,7 @@ import ReactCountryFlag from 'react-country-flag';
 import { useParams } from 'react-router-dom';
 import Card from '../components/Card';
 import Info from '../components/Info';
+import StatsHeader from '../components/StatsHeader';
 import { getPlayer } from '../fetchData';
 
 function PlayerProfile() {
@@ -47,7 +48,14 @@ function PlayerProfile() {
           <div className="right">
             <Card>
               <>
-                <h1>hello, world</h1>
+                <StatsHeader
+                  rankLetter={player.league.rank}
+                  rating={player.league.rating.toFixed(2)}
+                  glicko={player.league.glicko.toFixed(2)}
+                  rd={Math.round(player.league.rd)}
+                  rankGlobal={player.league.standing}
+                  rankLocal={player.league.standing_local}
+                />
                 <hr />
                 <Info name="games played" value={player.league.gamesplayed.toString()} />
                 <Info
