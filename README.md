@@ -2,24 +2,7 @@
 
 A remake of [TETR.IO leaderboard](https://ch.tetr.io/players/) built with React (and Express).
 
-## Try it yourself
-
-Do the following steps to get it up and running:
-
-1. Clone this repository to a directory in your local computer.
-2. Install the dependencies:
-```
-> npm install
-```
-3. Start the proxy server:
-```
-> npm run startProxy
-```
-4. Start the app by running:
-```
-> npm run start
-```
-5. Open your browser and go to `http://localhost:3000`.
+You can view the demo [here](https://angry-johnson-094f70.netlify.app/).
 
 ## Pages
 
@@ -40,6 +23,7 @@ Here are some of the things I learned while developing this application:
 1. Making API calls with [axios](https://www.npmjs.com/package/axios).
 2. Use of react `useEffect` hook.
 3. Routing with [react-router-dom](https://reactrouter.com/) (static and dynamic).
-4. Defining prop types of components.
-5. Make pages responsive with CSS media queries.
-6. Fixing CORS issues by creating a proxy server in between the web client (React) and the API.
+4. Pagination.
+5. Defining prop types of components.
+6. Make pages responsive with CSS media queries.
+7. Fixing CORS issues by creating a proxy server in between the web client (React) and the API.
