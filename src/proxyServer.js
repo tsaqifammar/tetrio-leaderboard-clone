@@ -4,6 +4,8 @@ const axios = require('axios');
 
 const app = express();
 
+const PORT = process.env.PORT || 4000;
+
 app.use(cors());
 
 app.get('/players', async (req, res) => {
@@ -33,6 +35,6 @@ app.get('/players/:username', async (req, res) => {
   }
 });
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
   console.log('Proxy server started on port 4000');
 });
