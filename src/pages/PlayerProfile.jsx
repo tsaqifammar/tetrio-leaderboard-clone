@@ -60,7 +60,7 @@ function PlayerProfile() {
                 <Info name="games played" value={player.league.gamesplayed.toString()} />
                 <Info
                   name="games won"
-                  value={player.league.gamesplayed.toString()}
+                  value={player.league.gameswon.toString()}
                   extra={`(${((parseFloat(player.league.gameswon) / parseFloat(player.league.gamesplayed)) * 100).toFixed(2)}%)`}
                 />
                 <Info
